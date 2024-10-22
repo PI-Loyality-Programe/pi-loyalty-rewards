@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import "./App.css";
+import "./Components/Write.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import NavPi from "./NavPi";
+import Home from "./Components/Home";
+import About from "./Components/AboutUs";
+import AboutPiNetwork from "./Components/AboutPi";
+import Programe from "./Components/ProgramePi";
+
+import WalletSelection from "./Components/WalletSelection";
+
+// Create a wrapper component to use the useLocation hook
+function AppWrapper() {
+  const location = useLocation(); // Get the current location
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavPi />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programe" element={<Programe />} />
+        <Route path="/pi-network" element={<AboutPiNetwork />} />
+      </Routes>
+      {/* Render WalletSelection only on the Home page */}
+      {location.pathname === "/" && <WalletSelection />}
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <AppWrapper />
+    </Router>
+  );
+}
+
+export default App;
