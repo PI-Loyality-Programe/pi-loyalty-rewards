@@ -1,0 +1,314 @@
+.wallet-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.select-wallet-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-wallet-button:hover {
+  background-color: #0069d9;
+}
+
+.pi-user-button {
+  background-color: #da42ea;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pi-user-button:hover {
+  background-color: #d033d0;
+}
+
+.wallet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.wallet-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wallet-button:hover {
+  background-color: #45a049;
+}
+
+/* Updated Selected Wallet Styles */
+.selected-wallet-button {
+  background-color: #da42ea;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.selected-wallet-button:hover {
+  background-color: #218838;
+}
+
+.selected-wallet-button strong {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Wallet Import Form Styles */
+.wallet-import-form {
+  margin-top: 30px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.wallet-import-form input#passphrase {
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;   /* Make the passphrase input take full width */
+  height: 150px;  /* Increase the height for better visibility */
+  box-sizing: border-box;  /* Ensure padding is included in width calculation */
+}
+
+.wallet-import-form input#privateKey {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+
+.wallet-import-form h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.wallet-import-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wallet-import-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.wallet-import-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wallet-import-form button:hover {
+  background-color: #0069d9;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: rgb(126, 8, 204);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background-color: #da42ea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-content button:hover {
+  background-color: #c535d3;
+}
+
+.loading-icon {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loading-icon iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries for smaller screens */
+
+/* Adjusting form and button layout for screens 768px or smaller */
+@media (max-width: 768px) {
+
+  .wallet-selection-container {
+    margin-top: 30px; /* Adjust spacing for smaller screens */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Increase gap for better spacing */
+  }
+
+  .select-wallet-button, 
+  .pi-user-button, 
+  .wallet-button, 
+  .selected-wallet-button, 
+  .wallet-import-form button {
+    padding: 12px 25px; /* Slightly reduce padding */
+    font-size: 1.2rem;  /* Adjust font size */
+  }
+
+  .wallet-buttons {
+    flex-direction: column; /* Stack wallet buttons vertically */
+    gap: 15px; /* Increase gap between buttons */
+  }
+
+  .wallet-import-form input#passphrase {
+    height: 100px; /* Reduce input height */
+    font-size: 1rem; /* Adjust font size */
+    width: 90%;
+  }
+
+  .wallet-import-form input#privateKey {
+    height: 35px; /* Slightly reduce input height */
+    font-size: 0.9rem; /* Adjust font size */
+    width: 90%;
+  }
+
+  .wallet-import-form h3 {
+    font-size: 1.8rem; /* Slightly smaller heading */
+  }
+
+  .wallet-import-form input {
+    font-size: 0.9rem; /* Slightly smaller input text */
+  }
+
+  .modal-content {
+    max-width: 320px; /* Reduce modal width */
+  }
+
+  .modal-content p {
+    font-size: 1rem; /* Adjust text size in modal */
+  }
+}
+
+/* Further adjustments for very small screens (max-width 480px) */
+@media (max-width: 480px) {
+
+  .wallet-selection-container {
+    margin-top: 20px;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .select-wallet-button, 
+  .pi-user-button, 
+  .wallet-button, 
+  .selected-wallet-button, 
+  .wallet-import-form button {
+    padding: 10px 20px; /* Further reduce padding */
+    font-size: 1rem;  /* Adjust font size for smaller screens */
+  }
+
+  .wallet-import-form input#passphrase {
+    height: 80px; /* Further reduce input height */
+    font-size: 0.9rem;
+  }
+
+  .wallet-import-form input#privateKey {
+    height: 30px; /* Adjust height */
+    font-size: 0.8rem; /* Adjust font size */
+  }
+
+  .wallet-import-form h3 {
+    font-size: 1.6rem; /* Smaller heading */
+  }
+
+  .wallet-import-form input {
+    font-size: 0.8rem; /* Smaller input text */
+  }
+
+  .modal-content {
+    max-width: 280px; /* Further reduce modal width */
+  }
+
+  .modal-content p {
+    font-size: 0.9rem; /* Adjust text size in modal */
+  }
+}

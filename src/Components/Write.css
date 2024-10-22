@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap');
+body, html {
+  overflow-x: hidden;
+}
+
+/* Page Styles for Program, About, and About Pi Network */
+.giveaway-purpose, .about-pi-network, .home-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* General Page Styling */
+.page {
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  min-height: 100vh;       /* Full screen height */
+  padding: 20px;
+}
+
+
+h1, p {
+  margin: 10px;
+}
+
+/* Ambient Breathing Effect for h1 with Better Contrast */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366; /* Start with Deep Blue */
+  transition: all 0.5s ease; /* Smooth transition */
+  animation: breatheAmbient 8s ease-in-out infinite; /* Slow and smooth breathing */
+  cursor: pointer;
+}
+
+/* Ambient Breathing animation for h1 */
+@keyframes breatheAmbient {
+  0% {
+    color: #003366; /* Deep Blue */
+    transform: scale(1); /* Normal size */
+  }
+  25% {
+    color: #00B3B3; /* Light Cyan */
+    transform: scale(1.05); /* Slightly enlarge */
+  }
+  50% {
+    color: #FFAA33; /* Warm Peach */
+    transform: scale(1.1); /* Slight more enlargement */
+  }
+  75% {
+    color: #00B3B3; /* Light Cyan again */
+    transform: scale(1.05); /* Slight reduction */
+  }
+  100% {
+    color: #003366; /* Return to Deep Blue */
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+h1:hover {
+  color: #FFAA33; /* Warm Peach on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F5C13D;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+/* Home page styling */
+
+.home-container {
+  display: flex;
+  justify-content: center;  /* Centers text horizontally */
+  align-items: center;      /* Aligns text vertically within the container */
+  flex-direction: column;
+  margin-top: 80px;         /* Adjust the space below the nav (change if needed) */
+  width: 100%;
+  text-align: center;       /* Centers the text horizontally */
+}
+
+.welcome-text {
+  font-size: 3rem;  /* Adjust the font size as needed */
+  margin: 0;        /* Removes default margin from <h1> */
+}
+
+.giveaway-purpose {
+  margin-top: -20px; /* Adds space between the heading and the paragraph */
+  font-size: 1.5rem; /* Adjust the font size for the section */
+  line-height: 1.8;   /* Makes the text more readable */
+  max-width: 800px;  /* Limits the width of the text */
+  margin-left: auto;
+  margin-right: auto; /* Centers the section text */
+  padding: 20px; /* Adds padding around the section */
+  font-family: 'Poppins', sans-serif; /* Fun and modern font */
+  letter-spacing: 2px;  /* Adds space between the letters */
+  font-style: italic;   /* Italicizes the text */
+  color: #a0dee9; /* Dark grey text color */
+  font-weight: 900;
+}
+
+.giveaway-purpose h2 {
+  font-size: 2.5rem;  /* Larger font size for the section heading */
+  margin-bottom: 10px; /* Adds space between heading and paragraph */
+  font-family: 'Lobster', cursive;  /* Fun font for the heading */
+  letter-spacing: 3px;  /* Adds more spacing to the heading */
+}
+
+
+
+
+
+/* Program Page Styling */
+.program-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.program-page ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  max-width: 900px;
+  text-align: left;
+}
+
+.program-page ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #E0E0E0;
+  margin: 15px 0;
+}
+
+/* About Page Styling */
+.about-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  color: #F5C13D;
+}
+
+.about-page p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #E0E0E0;
+}
+
+.about-page p span {
+  font-weight: 600;
+  color: #5B47C0;  /* Purple for emphasis */
+}
+
+.about-page .vision-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-page .vision-section h2 {
+  color: #F5C13D;
+  font-weight: 600;
+}
+
+.about-page .vision-section p {
+  color: #F5C13D;
+  font-weight: 500;
+}
+
+/* About Pi Network Page Styling */
+.about-pi-network {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-pi-network h1 {
+  color: #F5C13D;
+}
+
+.about-pi-network p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #E0E0E0;
+}
+
+.about-pi-network p span {
+  font-weight: 600;
+  color: #5B47C0;
+}
+
+.about-pi-network .section {
+  margin-top: 40px;
+}
+
+.about-pi-network .section h2 {
+  color: #F5C13D;
+  font-weight: 600;
+}
+
+.about-pi-network .section p {
+  color: #E0E0E0;
+  line-height: 1.8;
+}
+
+/* Styling for the Key Features list */
+.key-features-list {
+  list-style-type: none; /* Removes the default list style */
+  padding-left: 0;
+}
+
+/* Key Features List Item with Breathing Effect */
+.key-features-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease; /* Smooth transition for background color */
+  animation: breatheEffect 3s ease-in-out infinite; /* Breathing animation */
+}
+
+/* Breathing effect animation */
+@keyframes breatheEffect {
+  0% {
+    background-color: rgba(91, 71, 192, 0.1); /* Start with a purple tone */
+    transform: scale(1); /* Default size */
+  }
+  50% {
+    background-color: rgba(245, 193, 61, 0.3); /* Transition to a golden yellow tone */
+    transform: scale(1.05); /* Slightly enlarge the element */
+  }
+  100% {
+    background-color: rgba(91, 71, 192, 0.1); /* Return to the purple tone */
+    transform: scale(1); /* Return to default size */
+  }
+}
+
+.key-features-list li:hover {
+  background-color: rgba(245, 193, 61, 0.4); /* Gold on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.key-features-list li strong {
+  color: #F5C13D; /* Purple for strong text */
+  font-weight: 600;
+}
+
+.key-features-list li p {
+  margin: 0;
+  font-size: 1rem;
+  color: #E0E0E0;
+  line-height: 1.6;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .key-features-list li {
+    padding: 10px;
+  }
+}
+
+/* Responsive Design for Program, About, and Pi Network pages */
+
+/* Media queries for mobile devices (max-width 768px) */
+@media (max-width: 768px) {
+
+  /* Ensure all pages have enough padding at the top to avoid overlap with nav */
+  .about-page, .program-page, .about-pi-network {
+    padding-top: 120px;  /* Push content down below the fixed nav */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* General text adjustments */
+  h1 {
+    font-size: 2rem;  /* Adjust for mobile */
+    margin-top: 10px; /* Add margin to separate from the nav */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: 1rem; /* Slightly smaller font size for paragraphs on mobile */
+  }
+
+  ul li {
+    font-size: 1rem; /* Adjust list item size for readability on mobile */
+  }
+}
+
+
+  /* Strong emphasis text adjustments */
+  strong {
+    font-size: 1rem; /* Reduce strong text size for mobile */
+    color: #F5C13D; /* Keep strong text visible and appealing */
+  }
+
+  /* Adjust breathing animation for key features list on mobile */
+  .key-features-list li {
+    font-size: 1rem; /* Make sure it's readable */
+    animation: breathingMobile 4s ease-in-out infinite; /* Adjust animation timing for mobile */
+  }
+
+  /* Breathing animation timing for mobile */
+  @keyframes breathingMobile {
+    0% { background-color: #5B47C0; }
+    50% { background-color: #F5C13D; }
+    100% { background-color: #5B47C0; }
+  }
+
+
+/* Home page styling */
+
+/* Media Queries for Home Page */
+@media (max-width: 768px) {
+
+  .home-container {
+    margin-top: 40px; /* Reduce the top margin on smaller screens */
+    padding: 0 15px;  /* Add padding to the sides for better spacing */
+  }
+
+  .welcome-text {
+    margin-top: 95px;
+    font-size: 2rem;  /* Reduce font size for smaller screens */
+    margin-bottom: 10px; /* Add some margin below the text */
+  }
+
+  .giveaway-purpose {
+    font-size: 1.2rem;  /* Adjust the font size for readability */
+    line-height: 1.5;   /* Reduce line height */
+    padding: 10px;      /* Reduce padding for smaller screens */
+    max-width: 100%;    /* Allow the text to take full width */
+    margin-top: 10px;   /* Adjust margin for better spacing */
+  }
+
+  .giveaway-purpose h2 {
+    font-size: 2rem;    /* Reduce font size for heading */
+    margin-bottom: 5px; /* Adjust margin below heading */
+  }
+}
+
+/* Media Queries for even smaller screens */
+@media (max-width: 480px) {
+
+  .welcome-text {
+    margin-top: 40px;
+    font-size: 1.8rem;  /* Further reduce font size for very small screens */
+  }
+
+  .giveaway-purpose {
+    font-size: 1rem;    /* Make text smaller */
+    padding: 5px;       /* Further reduce padding */
+    margin-top: 5px;    /* Adjust margin */
+  }
+
+  .giveaway-purpose h2 {
+    font-size: 1.6rem;  /* Make heading smaller */
+    margin-bottom: 5px;
+  }
+}

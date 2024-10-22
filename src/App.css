@@ -1,42 +1,148 @@
+/* Global Styles - App.css or global.css */
+
+/* Set height to 100% for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%; /* Ensure the body takes up full height */
+}
+
+/* Root element styling with an elegant gradient background */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #5B47C0, #4B0082, #F5C13D);
+  background-size: 200% 200%;
+  animation: gradientBackground 10s ease infinite;
+  min-height: 100vh;  /* Ensure the gradient covers full height */
+  display: flex;  /* Flexbox to center content */
+  justify-content: flex-start; /* Align content to the start vertically */
+  align-items: flex-start; /* Align items at the top */
+  color: white;
+  flex-direction: column; /* Stack content vertically */
+  padding-top: 60px; /* Add padding to account for fixed nav bar */
+}
+
+/* Animation for dynamic gradient background */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: Add more styles for your content */
+h1, p {
+  margin: 10px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Navigation bar styling */
+nav {
+  background: linear-gradient(90deg, #5B47C0, #F5C13D);  /* Gradient blend of purple to golden yellow */
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px 0 rgba(245, 193, 61, 0.5);  /* Soft shadow with golden yellow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Ensure the nav items are spaced correctly */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px; /* Optional: control the max width of the nav */
+}
+
+nav li {
+  font-weight: 900;
+  font-size: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and shadow */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 0.6s ease;  /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+  background-color: #F5C13D;  /* Golden yellow background on hover */
+  color: #5B47C0;             /* Purple text on hover */
+  border-radius: 1.3rem;      /* Rounded corners on hover */
+}
+
+/* Hover effect for the entire list item */
+nav li:hover {
+  transform: translateY(7px);  /* Move the item upwards */
+  box-shadow: 0 10px 20px rgba(245, 193, 61, 0.5);  /* Add a shadow to make it pop */
+}
+
+
+
+/* Media queries for mobile devices (max-width 768px) */
+@media (max-width: 768px) {
+
+  /* Root element adjustments */
+  #root {
+    padding-top: 80px; /* Ensure enough space below the fixed nav */
+    justify-content: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Navigation bar styling */
+  nav {
+    padding: 10px 15px;
+    flex-direction: column;
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  /* Adjust the nav items */
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  nav li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 
-.read-the-docs {
-  color: #888;
+  nav a {
+    padding: 8px 15px;
+  }
+
+  /* General text adjustments */
+  h1, p {
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Remove hover effects on mobile */
+  nav a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  nav li:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
